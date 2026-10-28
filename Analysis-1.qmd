@@ -1,7 +1,20 @@
 ---
-title: "Analysis 1"
+title: "A Beautiful Graphic"
 author: Melissa Gonzalez- Ortiz
 format: html
+execute:
+  echo: false
 ---
 
 Melissa Gonzalez- Ortiz is a data maestro
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(displ, hwy, color = class)) +
+  geom_point() +
+  labs(x = "Engine size", y = "Highway MPG", color = "Vehicle type")
+```
